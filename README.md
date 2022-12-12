@@ -9,9 +9,9 @@ Formerly DuckDuckGo, W3C, Opera Software.
 
 ### Web Presence
 
-* Twitter: https://twitter.com/ourmaninjapan
-* Mastodon: https://mastodon.cloud/@ourmaninjapan
-* Blog: https://blog.daniemon.com
+* Twitter: [@ourmaninjapan](https://twitter.com/ourmaninjapan)
+* Mastodon: [@ourmaninjapan@mastodon.cloud](https://mastodon.cloud/@ourmaninjapan)
+* Blog: [blog.daniemon.com](https://blog.daniemon.com)
 
 
 

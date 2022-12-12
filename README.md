@@ -14,7 +14,9 @@ Formerly DuckDuckGo, W3C, Opera Software.
 * Mastodon: [@ourmaninjapan@mastodon.cloud](https://mastodon.cloud/@ourmaninjapan)
 * Blog: [blog.daniemon.com](https://blog.daniemon.com)
 
+### Recruitment Opportunities
 
+Sorry, I'm not interested and do not wish to be contacted.
 
 
 <!---

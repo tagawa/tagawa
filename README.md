@@ -4,8 +4,8 @@ Formerly DuckDuckGo, W3C, Opera Software.
 
 ### Current Projects
 
-* Privacy-First Jobs: A [job board for finding jobs at privacy-first companies and organisations](https://privacyfirstjobs.com)
-* Mizeni: A [database of Seiko watch movements](https://mizeni.com) for collectors and restorers.
+* **Privacy-First Jobs:** A [job board for finding jobs at privacy-first companies and organisations](https://privacyfirstjobs.com)
+* **Mizeni:** A [database of Seiko watch movements](https://mizeni.com) for collectors and restorers.
 
 ### Web Presence
 

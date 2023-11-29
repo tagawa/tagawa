@@ -1,6 +1,6 @@
 Hi, I'm Daniel, a geek in Japan with a ukulele.
 
-Formerly DuckDuckGo, W3C, Opera Software.
+DuckDuckGo. Formerly W3C, Opera Software.
 
 ### Current Projects
 

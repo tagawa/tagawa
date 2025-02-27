@@ -12,7 +12,7 @@ DuckDuckGo. Formerly W3C, Opera Software.
 
 ### Web Presence
 
-* Bluesky: [@ourmaninjapan]([https://twitter.com/ourmaninjapan](https://bsky.app/profile/ourmaninjapan.bsky.social))
+* Bluesky: [@ourmaninjapan](https://bsky.app/profile/ourmaninjapan.bsky.social)
 * Mastodon: [@ourmaninjapan@mastodon.cloud](https://mastodon.cloud/@ourmaninjapan)
 * Blog: [blog.daniemon.com](https://blog.daniemon.com)
 

@@ -1,14 +1,11 @@
 Hi, I'm Daniel, a geek in Japan with a ukulele.
 
-DuckDuckGo. Formerly W3C, Opera Software.
+Currently DuckDuckGo. Formerly W3C and Opera Software.
 
 ### Current Projects
 
 * **Mizeni:** A [database of Seiko watch movements](https://mizeni.com) for collectors and restorers.
 * **Retire Japan:** Helping with this [personal finance site for people living in Japan](https://www.retirejapan.com/).
-* **Japan Daily News:** AI-powered, computer-generated [Japan news podcast](https://japandailynews.com).
-* **TotemoTech:** AI-powered, computer-generated [Japan tech news podcast](https://totemotech.com).
-* **PuppyCoding:** Friendly [Python and AI tutorials](https://puppycoding.com).
 
 ### Web Presence
 

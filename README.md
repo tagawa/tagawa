@@ -9,7 +9,6 @@ Currently DuckDuckGo. Formerly W3C and Opera Software.
 
 ### Web Presence
 
-* Bluesky: [@ourmaninjapan](https://bsky.app/profile/ourmaninjapan.bsky.social)
 * Blog: [blog.daniemon.com](https://blog.daniemon.com)
 
 ### Recruitment Opportunities

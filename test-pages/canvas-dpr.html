@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Canvas resolution test</title>
+
+  <style>
+    canvas { width: 320px; height: 160px; border: 1px solid #ccc; }
+    figure { display: inline-block; margin: 0 16px 16px 0; }
+    figcaption { font: 13px sans-serif; }
+  </style>
+</head>
+<body>
+<p><a href="../index.html">[Home]</a></p>
+
+<p>Checks whether the browser draws an HTML canvas at the screen's actual resolution. Canvas 1 is a control (drawn at 1x, so it looks soft on a high-density screen). Canvas 2 is scaled by <code>devicePixelRatio</code> and should look as crisp as the plain HTML reference. If canvas 2 is blurry, the canvas is being drawn below the screen's resolution.</p>
+
+<figure><canvas id="c-naive"></canvas><figcaption>1. Drawn at 1x</figcaption></figure>
+<figure><canvas id="c-scaled"></canvas><figcaption>2. Drawn at devicePixelRatio</figcaption></figure>
+<figure>
+  <div style="width:320px;height:160px;border:1px solid #ccc;padding:8px;box-sizing:border-box;font:20px sans-serif;">The quick brown fox 0123456789
+    <div style="font-size:11px;">Small text: the quick brown fox jumps over the lazy dog.</div>
+  </div>
+  <figcaption>3. Reference: plain HTML text</figcaption>
+</figure>
+
+<p id="demo"></p>
+
+<p><button id="redraw">Redraw</button></p>
+
+<script>
+// scaleForDPR=false: backing store matches CSS pixels (soft on high-density screens).
+// scaleForDPR=true:  backing store multiplied by devicePixelRatio (crisp if honoured).
+function draw(canvas, scaleForDPR) {
+  var cssW = 320, cssH = 160;
+  var dpr = scaleForDPR ? (window.devicePixelRatio || 1) : 1;
+  canvas.width  = Math.round(cssW * dpr);
+  canvas.height = Math.round(cssH * dpr);
+  var ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cssW, cssH);
+  ctx.fillStyle = '#000'; ctx.textBaseline = 'top';
+  ctx.font = '20px sans-serif';
+  ctx.fillText('The quick brown fox 0123456789', 12, 12);
+  ctx.font = '11px sans-serif';
+  ctx.fillText('Small text: the quick brown fox jumps over the lazy dog.', 12, 48);
+  for (var i = 0; i < 6; i++) { ctx.fillRect(12, 76 + i * 6, cssW - 24, 1); } // 1px hairlines
+  return canvas.width + ' x ' + canvas.height;
+}
+
+function renderAll() {
+  draw(document.getElementById('c-naive'), false);
+  var backing = draw(document.getElementById('c-scaled'), true);
+  document.getElementById('demo').innerHTML =
+    'devicePixelRatio: ' + window.devicePixelRatio + '<br>' +
+    'Screen (logical px): ' + screen.width + ' x ' + screen.height + '<br>' +
+    'Window inner size (logical px): ' + window.innerWidth + ' x ' + window.innerHeight + '<br>' +
+    'Canvas 2 backing store (device px): ' + backing + ' (from 320 x 160 CSS px)<br>' +
+    'User agent: ' + navigator.userAgent;
+}
+
+document.getElementById('redraw').addEventListener('click', renderAll);
+window.addEventListener('resize', renderAll);
+
+// Re-render if devicePixelRatio changes (e.g. window moved to another display).
+function watchDPR() {
+  if (!window.matchMedia) return;
+  var mq = window.matchMedia('(resolution: ' + window.devicePixelRatio + 'dppx)');
+  var handler = function () { renderAll(); watchDPR(); };
+  if (mq.addEventListener) mq.addEventListener('change', handler, { once: true });
+  else if (mq.addListener) mq.addListener(handler);
+}
+
+renderAll();
+watchDPR();
+</script>
+
+</body>
+</html>

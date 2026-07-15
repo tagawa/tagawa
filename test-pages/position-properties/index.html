@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window &amp; Screen Position Properties Test Page</title>
+
+    <script src='./main.js' defer></script>
+    <link href='./style.css' rel='stylesheet'></link>
+</head>
+<body>
+    <p><a href="../../">[Home]</a> ↣ <a href="../">[Privacy Protections Tests]</a> ↣ <strong>[Window &amp; Screen Position Properties]</strong></p>
+
+    <p>This page reports the values of window/screen/scroll position and size properties, which behave differently across browsers and engines. Run it in each browser and compare (or diff the downloaded JSON).</p>
+
+    <p>Tests run automatically on load. Some properties only differ once the page is in a particular state (e.g. <code>body.scrollTop</code> vs <code>documentElement.scrollTop</code> only diverge after scrolling; <code>screenX</code> only changes when the window moves). To capture those, put the window in the state you want (scroll, resize, or move it), then click <strong>Re-run tests</strong> before downloading.</p>
+
+    <p><button id='start'>Re-run tests</button></p>
+
+    <div id='tests' hidden>
+        <p id='tests-summary'></p>
+        <ul id='tests-details'>
+        </ul>
+    </div>
+
+    <p><button id='download' disabled>Download the result</button></p>
+
+</body>
+</html>

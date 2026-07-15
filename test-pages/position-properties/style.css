@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Monospace the captured values so columns of numbers line up when scanning. */
+#tests-details .value {
+    font-family: monospace;
+}
